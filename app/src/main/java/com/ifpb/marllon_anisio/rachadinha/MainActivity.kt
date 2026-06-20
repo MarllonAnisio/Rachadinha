@@ -38,6 +38,11 @@ class MainActivity : AppCompatActivity() {
             calculateValues()
         }
 
+        binding.btnViewDebts.setOnClickListener {
+            val intent = Intent(this, PenduradosActivity::class.java)
+            startActivity(intent)
+        }
+
         binding.btnShare.setOnClickListener {
             shareBill()
         }
@@ -48,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         val numPeople = binding.etNumPeople.text.toString().toIntOrNull() ?: 1
 
         val tipPercentage = when (binding.rgTipPercentage.checkedRadioButtonId) {
+            R.id.rbTip0 -> 0.0
             R.id.rbTip10 -> 0.10
             R.id.rbTip15 -> 0.15
             R.id.rbTip20 -> 0.20

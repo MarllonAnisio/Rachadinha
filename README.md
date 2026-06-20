@@ -11,9 +11,10 @@ Sabe aquele momento no final do rolê em que ninguém quer fazer conta e todo mu
 ## 🚀 O que essa belezura faz?
 
 - **Cálculo a Jato**: Digite o valor e veja a mágica acontecer em tempo real. Sem botão de "calcular", porque a gente tem pressa de ir embora.
-- **Mão de Vaca ou Mão Aberta?**: Escolha entre 10%, 15% ou 20% de gorjeta com um toque.
+- **Mão de Vaca ou Mão Aberta?**: Escolha entre 0% (se o serviço foi ruim 😤), 10%, 15% ou 20% de gorjeta com um toque.
 - **Divisão Justa**: Divida por 2, 10 ou 50 pessoas (se você for popular).
 - **Mandar no Zap**: Gere um texto pronto com o valor por pessoa e compartilhe direto no grupo dos amigos. Chega de desculpas!
+- **📒 Caderneta de Pendurados**: Sabe aquele amigo que esqueceu a carteira? Anote o nome e o valor na lista de "Pendurados" para não esquecer de cobrar depois!
 
 ---
 
@@ -23,12 +24,12 @@ Este não é só mais um app de soma. Ele foi feito com o carinho de quem já te
 
 1.  **Blindado contra Erros**: Tente digitar letras ou dividir por zero. O app vai te dar um puxão de orelha educado (`TextInputLayout.error`) em vez de fechar na sua cara.
 2.  **View Binding**: Adeus `findViewById`! Código limpo e tipagem segura.
-3.  **UI de Respeito**: Material Design 3 puro, com cards elevados e ícones intuitivos.
-4.  **Acessibilidade**: Se a tela for pequena ou o teclado for gigante, o `ScrollView` garante que você não vai perder nenhum campo de vista.
+3.  **Navegação e Listas**: Uso de `Intents` para trocar de tela e `RecyclerView` com `Adapters` para gerenciar a lista de calotei... ops, de pendurados.
+4.  **UI de Respeito**: Material Design 3 puro, com cards elevados, ícones intuitivos e feedback visual.
 
 ---
 
-## 🏗️ Como subir o servidor (ou só rodar o app)
+## 🏗️ Como rodar o projeto
 
 ### Passo a passo para os curiosos:
 1. Clone este repositório (ou peça para um amigo clonar e te passar o valor):
@@ -43,9 +44,10 @@ Este não é só mais um app de soma. Ele foi feito com o carinho de quem já te
 
 ## 💻 Tech Stack de Elite
 
-- **Kotlin**: A linguagem dos deuses do Android.
-- **XML Layouts**: Porque clássico é clássico (e `ConstraintLayout` é vida).
-- **Material 3**: O visual que o Google aprova.
+- **Linguagem**: Kotlin (Moderno e conciso)
+- **UI**: XML Layouts (O clássico que nunca morre)
+- **Componentes**: Material 3, ConstraintLayout, RecyclerView, CardView.
+- **Arquitetura**: View Binding para código desacoplado.
 
 ---
 

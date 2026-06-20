@@ -3,14 +3,21 @@
     <string name="hint_bill_value">Valor da Conta</string>
     <string name="hint_num_people">Número de Pessoas</string>
     <string name="label_tip_percentage">Porcentagem da Gorjeta</string>
+    <string name="tip_0">0%%</string>
     <string name="tip_10">10%%</string>
     <string name="tip_15">15%%</string>
     <string name="tip_20">20%%</string>
     <string name="label_tip_amount">Gorjeta:</string>
     <string name="label_total_amount">Total da Conta:</string>
     <string name="label_per_person">Valor por Pessoa 💸</string>
+    <string name="default_currency">R$ 0,00</string>
     <string name="error_zero_people">O garçom também é gente!</string>
     <string name="share_text">A conta deu %s para cada! Bora pagar? 🍻</string>
     <string name="btn_share">Mandar no Zap</string>
-    <string name="default_currency">R$ 0,00</string>
+    <string name="btn_pendurados">Ver Pendurados 📒</string>
+    <string name="title_pendurados">Lista de Pendurados</string>
+    <string name="hint_name">Nome do Caloteiro</string>
+    <string name="hint_debt">Quanto deve?</string>
+    <string name="btn_add_debt">Pendurar</string>
+    <string name="empty_debts">Ninguém devendo… por enquanto! 🤔</string>
 </resources>

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="120dp"
+        android:paddingTop="80dp"
         android:paddingBottom="48dp"
         android:paddingStart="24dp"
         android:paddingEnd="24dp">
@@ -72,6 +72,13 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvTipPercentageLabel">
+
+            <RadioButton
+                android:id="@+id/rbTip0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tip_0" />
 
             <RadioButton
                 android:id="@+id/rbTip10"
@@ -200,6 +207,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cvResults" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewDebts"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/btn_pendurados"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnShare" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
