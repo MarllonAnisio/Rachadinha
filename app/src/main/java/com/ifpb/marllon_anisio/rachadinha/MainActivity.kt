@@ -1,5 +1,6 @@
 package com.ifpb.marllon_anisio.rachadinha
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,7 +12,7 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val currencyFormat = NumberFormat.getCurrencyInstance(Locale.forLanguageTag("pt-BR"))
+    private val currencyFormat = NumberFormat.getCurrencyInstance(Locale("pt", "BR"))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +37,10 @@ class MainActivity : AppCompatActivity() {
         binding.rgTipPercentage.setOnCheckedChangeListener { _, _ ->
             calculateValues()
         }
+
+        binding.btnShare.setOnClickListener {
+            shareBill()
+        }
     }
 
     private fun calculateValues() {
@@ -51,15 +56,34 @@ class MainActivity : AppCompatActivity() {
 
         val tipAmount = billValue * tipPercentage
         val totalAmount = billValue + tipAmount
-
-        val perPersonValue = if (numPeople > 0) totalAmount / numPeople else 0.0
-
-        updateUI(tipAmount, totalAmount, perPersonValue)
+        
+        // Validação rigorosa: evitar divisão por zero e exibir aviso
+        if (numPeople <= 0) {
+            binding.tilNumPeople.error = getString(R.string.error_zero_people)
+            updateUI(tipAmount, totalAmount, 0.0)
+        } else {
+            binding.tilNumPeople.error = null
+            val perPersonValue = totalAmount / numPeople
+            updateUI(tipAmount, totalAmount, perPersonValue)
+        }
     }
 
     private fun updateUI(tip: Double, total: Double, perPerson: Double) {
         binding.tvTipAmountValue.text = currencyFormat.format(tip)
         binding.tvTotalAmountValue.text = currencyFormat.format(total)
         binding.tvPerPersonValue.text = currencyFormat.format(perPerson)
+        
+        // Habilitar compartilhar apenas se houver valor
+        binding.btnShare.isEnabled = perPerson > 0
+    }
+
+    private fun shareBill() {
+        val perPerson = binding.tvPerPersonValue.text.toString()
+        val shareIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, getString(R.string.share_text, perPerson))
+            type = "text/plain"
+        }
+        startActivity(Intent.createChooser(shareIntent, null))
     }
 }

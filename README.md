@@ -1,69 +1,59 @@
-# 🍻 Rachadinha - Divisor de Contas
+# 🍻 Rachadinha - O Terror do "Paga que eu te dou depois"
 
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
 [![Android](https://img.shields.io/badge/Android-Lollipop%205.0+-3DDC84?logo=android&logoColor=white)](https://developer.android.com/)
 [![Material Design](https://img.shields.io/badge/Material%20Design-3-757575?logo=materialdesign&logoColor=white)](https://m3.material.io/)
 
-O **Rachadinha** é um aplicativo Android desenvolvido para resolver aquele momento clássico de "quem paga o quê" no final do bar ou restaurante. Com uma interface limpa e intuitiva, o app calcula gorjetas e divide o valor total da conta entre os amigos de forma instantânea.
+Sabe aquele momento no final do rolê em que ninguém quer fazer conta e todo mundo vira gênio da matemática? O **Rachadinha** chegou para acabar com a confusão e garantir que o garçom receba os 10% (ou 20%, se ele foi gente fina) sem ninguém sair no prejuízo.
 
 ---
 
-## 🚀 Funcionalidades
+## 🚀 O que essa belezura faz?
 
-- **Cálculo em Tempo Real**: Os valores são atualizados automaticamente enquanto você digita.
-- **Gorjetas Customizadas**: Seleção rápida entre 10%, 15% ou 20% de gratificação para o garçom.
-- **Divisão por Pessoa**: Informe o número de participantes e veja o valor exato para cada um.
-- **Formatação de Moeda**: Exibição automática no padrão brasileiro (R$ 0,00).
-
-## 🛠️ Diferenciais Técnicos
-
-Este projeto foi construído seguindo as melhores práticas de desenvolvimento Android:
-
-1.  **Validação Rigorosa**: O app é à prova de falhas. Ele impede crashes se o usuário digitar caracteres inválidos ou tentar dividir a conta por zero.
-2.  **View Binding**: Utilização de View Binding para uma interação mais segura e eficiente com os componentes do layout XML.
-3.  **UI Fluida**: Interface construída com `ConstraintLayout` para garantir que o design se adapte a diferentes tamanhos de tela.
-4.  **UX Otimizada**: Uso de `ScrollView` para garantir acessibilidade mesmo quando o teclado numérico está aberto.
-
-## 📱 Capturas de Tela
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/marllon-anisio/Rachadinha/main/screenshots/main_screen.png" width="300" alt="Tela Principal do App">
-</div>
+- **Cálculo a Jato**: Digite o valor e veja a mágica acontecer em tempo real. Sem botão de "calcular", porque a gente tem pressa de ir embora.
+- **Mão de Vaca ou Mão Aberta?**: Escolha entre 10%, 15% ou 20% de gorjeta com um toque.
+- **Divisão Justa**: Divida por 2, 10 ou 50 pessoas (se você for popular).
+- **Mandar no Zap**: Gere um texto pronto com o valor por pessoa e compartilhe direto no grupo dos amigos. Chega de desculpas!
 
 ---
 
-## 🏗️ Como Rodar o Projeto
+## 🛠️ Por baixo do capô (O que te faz um Dev Ninja)
 
-### Pré-requisitos
-- Android Studio Ladybug ou superior.
-- JDK 11 ou superior.
-- Um dispositivo físico ou emulador com Android 5.0 (API 24) ou superior.
+Este não é só mais um app de soma. Ele foi feito com o carinho de quem já teve que debugar código em produção:
 
-### Passo a passo
-1. Clone este repositório:
+1.  **Blindado contra Erros**: Tente digitar letras ou dividir por zero. O app vai te dar um puxão de orelha educado (`TextInputLayout.error`) em vez de fechar na sua cara.
+2.  **View Binding**: Adeus `findViewById`! Código limpo e tipagem segura.
+3.  **UI de Respeito**: Material Design 3 puro, com cards elevados e ícones intuitivos.
+4.  **Acessibilidade**: Se a tela for pequena ou o teclado for gigante, o `ScrollView` garante que você não vai perder nenhum campo de vista.
+
+---
+
+## 🏗️ Como subir o servidor (ou só rodar o app)
+
+### Passo a passo para os curiosos:
+1. Clone este repositório (ou peça para um amigo clonar e te passar o valor):
    ```bash
    git clone https://github.com/marllon-anisio/rachadinha.git
    ```
-2. Abra o projeto no **Android Studio**.
-3. Aguarde a sincronização do **Gradle**.
-4. Clique em **Run** (ícone de play verde) para instalar no seu dispositivo.
+2. Abra no **Android Studio**.
+3. Reze para o **Gradle** baixar tudo de primeira.
+4. Aperte o **Play** e seja feliz.
 
 ---
 
-## 💻 Tecnologias Utilizadas
+## 💻 Tech Stack de Elite
 
-- **Linguagem**: [Kotlin](https://kotlinlang.org/)
-- **Layout**: XML (ConstraintLayout)
-- **UI Components**: Material Components para Android
-- **Build System**: Gradle Kotlin DSL (.kts)
+- **Kotlin**: A linguagem dos deuses do Android.
+- **XML Layouts**: Porque clássico é clássico (e `ConstraintLayout` é vida).
+- **Material 3**: O visual que o Google aprova.
 
 ---
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Uso livre para rachar qualquer conta, desde que não seja a minha. Veja o arquivo [LICENSE](LICENSE) para o juridiquês.
 
 ---
 <div align="center">
-  Desenvolvido por <strong>Marllon Anísio</strong> 🚀
+  Codado com ☕ e talvez uma 🍺 por <strong>Marllon Anísio</strong>
 </div>

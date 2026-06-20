@@ -8,6 +8,9 @@
     <string name="tip_20">20%%</string>
     <string name="label_tip_amount">Gorjeta:</string>
     <string name="label_total_amount">Total da Conta:</string>
-    <string name="label_per_person">Valor por Pessoa</string>
+    <string name="label_per_person">Valor por Pessoa 💸</string>
+    <string name="error_zero_people">O garçom também é gente!</string>
+    <string name="share_text">A conta deu %s para cada! Bora pagar? 🍻</string>
+    <string name="btn_share">Mandar no Zap</string>
     <string name="default_currency">R$ 0,00</string>
 </resources>
