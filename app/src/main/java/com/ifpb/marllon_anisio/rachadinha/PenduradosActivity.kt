@@ -6,6 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ifpb.marllon_anisio.rachadinha.databinding.ActivityPenduradosBinding
 
+/**
+ * Activity responsável por gerenciar a caderneta de calotes (Pendurados).
+ * Utiliza uma RecyclerView para exibir a lista dinâmica de débitos.
+ */
 class PenduradosActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPenduradosBinding
@@ -21,6 +25,10 @@ class PenduradosActivity : AppCompatActivity() {
         setupListeners()
     }
 
+    /**
+     * Inicializa a RecyclerView com o Adapter customizado e o LayoutManager.
+     * Define o estado inicial da tela (vazia ou com lista).
+     */
     private fun setupRecyclerView() {
         adapter = PenduradosAdapter(penduradosList)
         binding.rvPendurados.layoutManager = LinearLayoutManager(this)
@@ -28,17 +36,22 @@ class PenduradosActivity : AppCompatActivity() {
         updateEmptyState()
     }
 
+    /**
+     * Configura a ação do botão de adicionar novos débitos.
+     * Realiza a validação básica de campos antes de inserir na lista.
+     */
     private fun setupListeners() {
         binding.btnAddDebt.setOnClickListener {
             val name = binding.etName.text.toString()
             val debt = binding.etDebt.text.toString().toDoubleOrNull() ?: 0.0
 
             if (name.isNotBlank() && debt > 0) {
+                // Inserção no topo da lista para melhor feedback visual
                 penduradosList.add(0, Pendurado(name, debt))
                 adapter.notifyItemInserted(0)
                 binding.rvPendurados.scrollToPosition(0)
                 
-                // Limpar campos
+                // Limpeza e reset do foco para nova entrada
                 binding.etName.text?.clear()
                 binding.etDebt.text?.clear()
                 binding.etName.clearFocus()
@@ -48,6 +61,10 @@ class PenduradosActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Alterna a visibilidade entre a mensagem de "Lista Vazia" e a RecyclerView
+     * baseado no conteúdo da lista de pendurados.
+     */
     private fun updateEmptyState() {
         if (penduradosList.isEmpty()) {
             binding.tvEmpty.visibility = View.VISIBLE
