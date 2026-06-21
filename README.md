@@ -34,7 +34,7 @@ Este não é só mais um app de soma. Ele foi feito com o carinho de quem já te
 ### Passo a passo para os curiosos:
 1. Clone este repositório (ou peça para um amigo clonar e te passar o valor):
    ```bash
-   git clone https://github.com/marllon-anisio/rachadinha.git
+   git clone https://github.com/marllon-anisio/Rachadinha.git
    ```
 2. Abra no **Android Studio**.
 3. Reze para o **Gradle** baixar tudo de primeira.
